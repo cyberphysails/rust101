@@ -46,6 +46,37 @@ fn e_arrays() {
     }
 }
 
+fn e_break_label() {
+    let s = [[1,2,3],[4,5,6], [7,8,9]];
+    let target = 6;
+    let mut ele_searched = 0;
+    'outer: for j in s {
+       for k in j {
+            if k == target {
+                break 'outer;   
+            }else {
+                ele_searched += 1;
+            }
+        } 
+    };
+    println!("Searched {} items!", ele_searched); 
+}
+
+fn factorial(n: u32) -> u32 {
+   let mut product = 1;
+    for i in 1..=n {
+        product *= dbg!(i);
+    }
+    product
+}
+
+fn e_macros_test() {
+    let n = 4;
+    println!("factorial of {} is {}", n, factorial(n));
+}
+
 fn main() {
-    e_arrays();
+    //e_arrays();
+    //e_break_label();
+    e_macros_test();
 }

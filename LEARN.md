@@ -69,3 +69,15 @@ println!("{a} is a prime number? {res}");
 rust 中数组和元组都是固定长度的，元组中可以包含不同类型的元素，而数组元素必须是相同类型；
 
 数组和元组取元素时的表达式也不同，`array[index]` `tuple.index`; 元组可以解构取值，数组不可以；数组可以用 `len()` 函数返回其长度，元组不行；
+
+### Function
+
+Function has return type, default is an unit type `()`, if there is no specified value being returned.
+The last expression becomes the return value.
+
+Overloading is not supported.
+
+### Macros 
+
+Macros expended into Rust code during compilation, and can take a variable number of arguments.
+
